@@ -1,0 +1,62 @@
+{
+   "abstract" : "Add a BUGS AND LIMITATIONS pod section",
+   "author" : [
+      "Marcel Gruenauer <marcel@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.101900, CPAN::Meta::Converter version 2.101670",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Pod-Weaver-Section-BugsAndLimitations",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla::Plugin::Bugtracker" : 0,
+            "Moose" : 0,
+            "Moose::Autobox" : 0,
+            "Pod::Weaver::Role::Section" : 0,
+            "namespace::autoclean" : 0,
+            "perl" : "5.008"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Carp" : 0,
+            "English" : 0,
+            "File::Find" : 0,
+            "File::Temp" : 0,
+            "Scalar::Util" : 0,
+            "Test::More" : "0.94"
+         }
+      }
+   },
+   "provides" : {
+      "Pod::Weaver::Section::BugsAndLimitations" : {
+         "file" : "lib/Pod/Weaver/Section/BugsAndLimitations.pm",
+         "version" : "1.102460"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-pod-weaver-section-bugsandlimitations at rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Weaver-Section-BugsAndLimitations"
+      },
+      "homepage" : "http://search.cpan.org/dist/Pod-Weaver-Section-BugsAndLimitations/",
+      "repository" : {
+         "url" : "http://github.com/hanekomu/Pod-Weaver-Section-BugsAndLimitations"
+      }
+   },
+   "version" : "1.102460"
+}
+
