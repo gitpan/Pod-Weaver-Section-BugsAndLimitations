@@ -1,10 +1,11 @@
 {
    "abstract" : "Add a BUGS AND LIMITATIONS pod section",
    "author" : [
-      "Marcel Gruenauer <marcel@cpan.org>"
+      "Marcel Gruenauer <marcel@cpan.org>",
+      "Mike Doherty <doherty@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102341, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300006, CPAN::Meta::Converter version 2.113640",
    "license" : [
       "perl_5"
    ],
@@ -13,10 +14,21 @@
       "version" : "2"
    },
    "name" : "Pod-Weaver-Section-BugsAndLimitations",
+   "no_index" : {
+      "directory" : [
+         "corpus"
+      ]
+   },
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.3601"
+         }
+      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30",
+            "Module::Build" : "0.3601"
          }
       },
       "runtime" : {
@@ -26,37 +38,30 @@
             "Moose::Autobox" : 0,
             "Pod::Weaver::Role::Section" : 0,
             "namespace::autoclean" : 0,
-            "perl" : "5.008"
+            "perl" : "5.008",
+            "strict" : 0,
+            "warnings" : 0
          }
       },
       "test" : {
          "requires" : {
-            "Carp" : 0,
-            "English" : 0,
             "File::Find" : 0,
             "File::Temp" : 0,
-            "Scalar::Util" : 0,
-            "Test::More" : "0.94"
+            "Test::More" : 0
          }
-      }
-   },
-   "provides" : {
-      "Pod::Weaver::Section::BugsAndLimitations" : {
-         "file" : "lib/Pod/Weaver/Section/BugsAndLimitations.pm",
-         "version" : "1.102670"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "mailto" : "bug-pod-weaver-section-bugsandlimitations at rt.cpan.org",
-         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Pod-Weaver-Section-BugsAndLimitations"
+         "web" : "https://github.com/doherty/Pod-Weaver-Section-BugsAndLimitations/issues"
       },
-      "homepage" : "http://search.cpan.org/dist/Pod-Weaver-Section-BugsAndLimitations/",
       "repository" : {
-         "url" : "http://github.com/hanekomu/Pod-Weaver-Section-BugsAndLimitations"
+         "type" : "git",
+         "url" : "git://github.com/doherty/Pod-Weaver-Section-BugsAndLimitations.git",
+         "web" : "https://github.com/doherty/Pod-Weaver-Section-BugsAndLimitations"
       }
    },
-   "version" : "1.102670"
+   "version" : "1.20"
 }
 

@@ -3,15 +3,14 @@ use strict;
 use warnings;
 
 package Pod::Weaver::Section::BugsAndLimitations;
-BEGIN {
-  $Pod::Weaver::Section::BugsAndLimitations::VERSION = '1.102670';
-}
-
 # ABSTRACT: Add a BUGS AND LIMITATIONS pod section
+our $VERSION = '1.20'; # VERSION
 use Moose;
 with 'Pod::Weaver::Role::Section';
+
 use namespace::autoclean;
 use Moose::Autobox;
+
 
 sub weave_section {
     my ($self, $document, $input) = @_;
@@ -24,10 +23,8 @@ sub weave_section {
                 children => [
                     Pod::Elemental::Element::Pod5::Ordinary->new(
                         {   content => <<EOPOD,
-No bugs have been reported.
-
-Please report any bugs or feature requests through the web interface at
-L<$bugtracker>.
+You can make new bug reports, and view existing ones, through the
+web interface at L<$bugtracker>.
 EOPOD
                         }
                     ),
@@ -36,14 +33,13 @@ EOPOD
         ),
     );
 }
-1;
 
+1;
 
 __END__
 =pod
 
-=for test_synopsis 1;
-__END__
+=encoding utf-8
 
 =head1 NAME
 
@@ -51,7 +47,7 @@ Pod::Weaver::Section::BugsAndLimitations - Add a BUGS AND LIMITATIONS pod sectio
 
 =head1 VERSION
 
-version 1.102670
+version 1.20
 
 =head1 SYNOPSIS
 
@@ -67,41 +63,46 @@ URL.
 You need to use L<Dist::Zilla::Plugin::Bugtracker> in your C<dist.ini> file,
 because this plugin relies on information that other plugin generates.
 
-=head1 FUNCTIONS
-
 =head2 weave_section
 
 adds the C<BUGS AND LIMITATIONS> section.
 
-=head1 INSTALLATION
-
-See perlmodinstall for information and options on installing Perl modules.
-
-=head1 BUGS AND LIMITATIONS
-
-No bugs have been reported.
-
-Please report any bugs or feature requests through the web interface at
-L<http://rt.cpan.org>.
+=for test_synopsis 1;
+__END__
 
 =head1 AVAILABILITY
 
 The latest version of this module is available from the Comprehensive Perl
 Archive Network (CPAN). Visit L<http://www.perl.com/CPAN/> to find a CPAN
-site near you, or see L<http://search.cpan.org/dist/Pod-Weaver-Section-BugsAndLimitations/>.
+site near you, or see L<https://metacpan.org/module/Pod::Weaver::Section::BugsAndLimitations/>.
 
-The development version lives at L<http://github.com/hanekomu/Pod-Weaver-Section-BugsAndLimitations>
-and may be cloned from L<git://github.com/hanekomu/Pod-Weaver-Section-BugsAndLimitations>.
-Instead of sending patches, please fork this project using the standard
-git and github infrastructure.
+=head1 SOURCE
 
-=head1 AUTHOR
+The development version is on github at L<http://github.com/doherty/Pod-Weaver-Section-BugsAndLimitations>
+and may be cloned from L<git://github.com/doherty/Pod-Weaver-Section-BugsAndLimitations.git>
+
+=head1 BUGS AND LIMITATIONS
+
+You can make new bug reports, and view existing ones, through the
+web interface at L<https://github.com/doherty/Pod-Weaver-Section-BugsAndLimitations/issues>.
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Marcel Gruenauer <marcel@cpan.org>
 
+=item *
+
+Mike Doherty <doherty@cpan.org>
+
+=back
+
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Marcel Gruenauer.
+This software is copyright (c) 2010 by Mike Doherty.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
